@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>金澤・富山 ｜ 2026 冬 五日</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;500;700&family=Noto+Sans+TC:wght@300;400;500&family=Shippori+Mincho:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  /* 加賀五彩 — the five traditional dye colours of Kaga */
+  --enji:#A8455A;        /* 臙脂 */
+  --ai:#3E6C99;          /* 藍 */
+  --odo:#C48B3C;         /* 黄土 */
+  --kusa:#6B8A54;        /* 草 */
+  --murasaki:#7B5A8C;    /* 古代紫 */
+
+  /* ground & foil */
+  --ink:#0F1320;
+  --ink-2:#161B2C;
+  --ink-3:#1E2438;
+  --foil:#C9A94E;
+  --foil-hi:#F2E1A8;
+  --paper:#EDE8DD;
+  --paper-dim:#A9A392;
+  --hair:rgba(201,169,78,.22);
+
+  --serif:"Noto Serif TC",serif;
+  --sans:"Noto Sans TC",sans-serif;
+  --mincho:"Shippori Mincho",serif;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--ink);
+  color:var(--paper);
+  font-family:var(--sans);
+  font-weight:300;
+  line-height:1.85;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+
+/* ---------- gold foil rule ---------- */
+.foil{
+  height:1px;border:0;
+  background:linear-gradient(90deg,transparent,var(--foil) 12%,var(--foil-hi) 38%,var(--foil) 62%,transparent);
+  opacity:.5;
+}
+
+.wrap{max-width:940px;margin:0 auto;padding:0 28px}
+
+/* ---------- hero ---------- */
+.hero{
+  min-height:88vh;
+  display:flex;align-items:center;
+  position:relative;
+  padding:80px 0 60px;
+}
+.hero::after{
+  content:"";position:absolute;inset:0;
+  background:
+    radial-gradient(120% 80% at 78% 12%,rgba(201,169,78,.14),transparent 55%),
+    radial-gradient(90% 60% at 8% 92%,rgba(62,108,153,.16),transparent 60%);
+  pointer-events:none;
+}
+.hero-inner{
+  display:flex;gap:52px;align-items:flex-start;
+  width:100%;position:relative;z-index:1;
+}
+.hero-main{flex:1;min-width:0}
+
+.eyebrow{
+  font-family:var(--mincho);
+  font-size:.72rem;letter-spacing:.42em;
+  color:var(--foil);text-transform:uppercase;
+  margin-bottom:30px;
+}
+.hero h1{
+  font-family:var(--serif);font-weight:700;
+  font-size:clamp(3.1rem,10vw,6.2rem);
+  line-height:.98;letter-spacing:.06em;
+  margin-bottom:26px;
+}
+.hero h1 .gold{
+  background:linear-gradient(160deg,var(--foil-hi),var(--foil) 45%,#8E7327 90%);
+  -webkit-background-clip:text;background-clip:text;
+  color:transparent;
+}
+.hero-sub{
+  font-family:var(--serif);font-weight:300;
+  font-size:1.02rem;letter-spacing:.16em;
+  color:var(--paper-dim);max-width:30em;
+}
+
+/* vertical date column — the signature */
+.tate{
+  writing-mode:vertical-rl;
+  font-family:var(--mincho);font-weight:400;
+  font-size:1.02rem;letter-spacing:.34em;
+  color:var(--paper-dim);
+  border-right:1px solid var(--hair);
+  padding-right:20px;
+  height:340px;
+  flex-shrink:0;
+}
+.tate b{color:var(--foil);font-weight:600}
+
+.facts{
+  display:flex;flex-wrap:wrap;gap:0;
+  margin-top:52px;border-top:1px solid var(--hair);
+}
+.fact{
+  padding:20px 34px 20px 0;margin-right:34px;
+  border-right:1px solid var(--hair);
+}
+.fact:last-child{border-right:0;margin-right:0;padding-right:0}
+.fact dt{
+  font-family:var(--mincho);font-size:.66rem;
+  letter-spacing:.3em;color:var(--foil);margin-bottom:6px;
+}
+.fact dd{font-family:var(--serif);font-size:1.05rem;letter-spacing:.06em}
+
+/* ---------- section frame ---------- */
+.section{padding:74px 0}
+.sec-head{display:flex;align-items:baseline;gap:18px;margin-bottom:38px}
+.sec-head h2{
+  font-family:var(--serif);font-weight:500;
+  font-size:1.42rem;letter-spacing:.2em;
+}
+.sec-head span{
+  font-family:var(--mincho);font-size:.66rem;
+  letter-spacing:.34em;color:var(--foil);
+}
+
+/* ---------- logistics ---------- */
+.rows{border-top:1px solid var(--hair)}
+.row{
+  display:grid;grid-template-columns:132px 1fr auto;
+  gap:20px;align-items:baseline;
+  padding:19px 0;border-bottom:1px solid var(--hair);
+}
+.row dt{
+  font-family:var(--mincho);font-size:.74rem;
+  letter-spacing:.2em;color:var(--foil);
+}
+.row dd{font-size:.94rem}
+.row .meta{
+  font-family:var(--mincho);font-size:.78rem;
+  letter-spacing:.14em;color:var(--paper-dim);white-space:nowrap;
+}
+
+/* ---------- days ---------- */
+.day{
+  position:relative;padding:0 0 8px 34px;margin-bottom:56px;
+  border-left:2px solid var(--c);
+}
+.day::before{
+  content:"";position:absolute;left:-5px;top:9px;
+  width:8px;height:8px;background:var(--c);
+  transform:rotate(45deg);
+}
+.day-head{margin-bottom:22px}
+.day-no{
+  font-family:var(--mincho);font-size:.68rem;
+  letter-spacing:.34em;color:var(--c);margin-bottom:9px;
+}
+.day-head h3{
+  font-family:var(--serif);font-weight:500;
+  font-size:1.34rem;letter-spacing:.14em;margin-bottom:8px;
+}
+.day-note{
+  font-size:.86rem;color:var(--paper-dim);
+  max-width:44em;letter-spacing:.04em;
+}
+
+.stops{list-style:none;margin-top:22px}
+.stops li{
+  display:grid;grid-template-columns:74px 1fr;
+  gap:18px;padding:11px 0;
+  border-top:1px solid rgba(237,232,221,.08);
+}
+.stops li:first-child{border-top:0}
+.stops time{
+  font-family:var(--mincho);font-size:.82rem;
+  letter-spacing:.1em;color:var(--foil);padding-top:1px;
+}
+.stops strong{font-weight:500;font-size:.97rem;display:block;letter-spacing:.04em}
+.stops em{
+  font-style:normal;font-size:.82rem;
+  color:var(--paper-dim);display:block;margin-top:2px;
+}
+
+/* ---------- fork (day 3) ---------- */
+.fork{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--hair);margin-top:24px}
+.opt{background:var(--ink-2);padding:24px 22px}
+.opt-tag{
+  font-family:var(--mincho);font-size:.68rem;
+  letter-spacing:.26em;margin-bottom:5px;
+}
+.opt h4{
+  font-family:var(--serif);font-weight:500;
+  font-size:1.02rem;letter-spacing:.1em;margin-bottom:14px;
+}
+.opt.sunny .opt-tag{color:var(--odo)}
+.opt.rainy .opt-tag{color:var(--ai)}
+.opt ul{list-style:none;font-size:.86rem}
+.opt li{
+  padding:7px 0 7px 15px;position:relative;
+  color:var(--paper-dim);letter-spacing:.03em;
+}
+.opt li::before{
+  content:"";position:absolute;left:0;top:16px;
+  width:5px;height:1px;background:var(--foil);opacity:.6;
+}
+.opt li b{color:var(--paper);font-weight:400}
+.fork-note{
+  font-size:.8rem;color:var(--paper-dim);
+  margin-top:14px;letter-spacing:.03em;
+}
+
+/* ---------- notes ---------- */
+.notes{
+  background:var(--ink-2);
+  border-top:1px solid var(--hair);
+  border-bottom:1px solid var(--hair);
+  padding:52px 0;
+}
+.note-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:34px}
+.note h4{
+  font-family:var(--mincho);font-size:.7rem;
+  letter-spacing:.28em;color:var(--foil);margin-bottom:12px;
+}
+.note p{font-size:.87rem;color:var(--paper-dim);letter-spacing:.03em}
+.note p b{color:var(--paper);font-weight:400}
+
+footer{padding:56px 0 72px;text-align:center}
+footer p{
+  font-family:var(--mincho);font-size:.72rem;
+  letter-spacing:.34em;color:var(--paper-dim);
+}
+
+/* ---------- motion ---------- */
+.rise{opacity:0;transform:translateY(18px);transition:opacity .9s ease,transform .9s ease}
+.rise.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){
+  .rise{opacity:1;transform:none;transition:none}
+  html{scroll-behavior:auto}
+}
+
+/* ---------- responsive ---------- */
+@media (max-width:760px){
+  .wrap{padding:0 20px}
+  .hero{min-height:auto;padding:64px 0 44px}
+  .hero-inner{flex-direction:column;gap:30px}
+  .tate{
+    writing-mode:horizontal-tb;height:auto;
+    border-right:0;border-left:2px solid var(--foil);
+    padding:2px 0 2px 14px;letter-spacing:.18em;font-size:.9rem;
+    order:-1;
+  }
+  .facts{gap:0}
+  .fact{
+    width:50%;margin-right:0;padding:16px 16px 16px 0;
+    border-right:0;border-bottom:1px solid var(--hair);
+  }
+  .fact:last-child{padding-right:16px}
+  .row{grid-template-columns:1fr;gap:5px;padding:16px 0}
+  .row .meta{white-space:normal}
+  .fork{grid-template-columns:1fr}
+  .note-grid{grid-template-columns:1fr;gap:28px}
+  .stops li{grid-template-columns:64px 1fr;gap:12px}
+  .day{padding-left:22px}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap hero-inner">
+    <div class="hero-main">
+      <p class="eyebrow rise">Kanazawa &amp; Toyama</p>
+      <h1 class="rise">金澤<br><span class="gold">五日</span></h1>
+      <p class="hero-sub rise">初雪前的北陸。三晚安江町，一晚和紙老屋，中間放一天跨到富山看立山連峰。</p>
+
+      <dl class="facts rise">
+        <div class="fact"><dt>DATES</dt><dd>11.29 – 12.03</dd></div>
+        <div class="fact"><dt>NIGHTS</dt><dd>四晚</dd></div>
+        <div class="fact"><dt>CITIES</dt><dd>金澤・富山</dd></div>
+      </dl>
+    </div>
+    <div class="tate rise">二〇二六年　<b>十一月二十九日</b>　→　<b>十二月三日</b></div>
+  </div>
+</header>
+
+<hr class="foil">
+
+<section class="section wrap">
+  <div class="sec-head rise"><h2>交通與住宿</h2><span>LOGISTICS</span></div>
+  <dl class="rows">
+    <div class="row rise">
+      <dt>去程</dt>
+      <dd>台灣虎航 IT252　桃園 12:00 → 小松 15:35</dd>
+      <div class="meta">11.29（日）</div>
+    </div>
+    <div class="row rise">
+      <dt>回程</dt>
+      <dd>台灣虎航 IT253　小松 16:45 → 桃園 19:20</dd>
+      <div class="meta">12.03（四）</div>
+    </div>
+    <div class="row rise">
+      <dt>前三晚</dt>
+      <dd>ホテルフォルツァ金沢　安江町 2-10　休閒雙床房 26㎡</dd>
+      <div class="meta">11.29 – 12.02</div>
+    </div>
+    <div class="row rise">
+      <dt>最後一晚</dt>
+      <dd>旅情之宿 金澤草紙　安江町 12-37　高級雙床 25㎡・含早餐</dd>
+      <div class="meta">12.02 – 12.03</div>
+    </div>
+  </dl>
+</section>
+
+<hr class="foil">
+
+<section class="section wrap">
+  <div class="sec-head rise"><h2>每日行程</h2><span>ITINERARY</span></div>
+
+  <!-- DAY 1 -->
+  <article class="day rise" style="--c:var(--enji)">
+    <div class="day-head">
+      <p class="day-no">一日目　11.29　日</p>
+      <h3>落地，然後把行李放下</h3>
+      <p class="day-note">下午的飛機，傍晚才進市區。第一晚不排景點，走去近江町那一帶吃頓好的就好。</p>
+    </div>
+    <ol class="stops">
+      <li><time>15:35</time><div><strong>小松機場</strong><em>出關後搭機場巴士，約 40 分鐘直達金澤站</em></div></li>
+      <li><time>17:00</time><div><strong>Forza 金澤　入住</strong><em>安江町，從車站走過來約 15 分鐘</em></div></li>
+      <li><time>晚上</time><div><strong>近江町一帶晚餐</strong><em>先挑好店，天黑後別現找</em></div></li>
+    </ol>
+  </article>
+
+  <!-- DAY 2 -->
+  <article class="day rise" style="--c:var(--odo)">
+    <div class="day-head">
+      <p class="day-no">二日目　11.30　月</p>
+      <h3>金澤的街，慢慢走</h3>
+      <p class="day-note">週一美術館全休，所以今天不看展。市場、茶屋街、武家屋敷，加上一間唱片行——全部是走路可及的距離。</p>
+    </div>
+    <ol class="stops">
+      <li><time>上午</time><div><strong>近江町市場</strong><em>海鮮丼當早午餐，冬天是甜蝦與松葉蟹</em></div></li>
+      <li><time>中午</time><div><strong>東茶屋街・主計町</strong><em>格子窗的老街，金箔與茶屋建築</em></div></li>
+      <li><time>下午</time><div><strong>尾山神社・長町武家屋敷</strong><em>神門的彩繪玻璃，土牆小巷</em></div></li>
+      <li><time>傍晚</time><div><strong>唱片行</strong><em>今天的收尾，慢慢挑</em></div></li>
+      <li><time>睡前</time><div><strong>看一下明天的天氣</strong><em>晴或雨，決定明天去海邊還是進市區</em></div></li>
+    </ol>
+  </article>
+
+  <!-- DAY 3 -->
+  <article class="day rise" style="--c:var(--ai)">
+    <div class="day-head">
+      <p class="day-no">三日目　12.01　火</p>
+      <h3>跨到富山，看天氣選路線</h3>
+      <p class="day-note">十一月底立山連峰剛積滿雪，空氣也最清。晴天就去海邊看雪山浮在海上，天灰就進市區走美術館。前一晚決定。</p>
+    </div>
+    <div class="fork">
+      <div class="opt sunny">
+        <p class="opt-tag">晴 ／ PLAN A</p>
+        <h4>雨晴海岸・高岡</h4>
+        <ul>
+          <li><b>07:45</b> 出門，金澤 08:15 發車</li>
+          <li><b>09:43</b> 高岡轉冰見線，沿海而行</li>
+          <li><b>10:03–12:05</b> 雨晴海岸　女岩與立山連峰同框</li>
+          <li><b>下午</b> 瑞龍寺（國寶）、高岡古城公園</li>
+        </ul>
+        <p class="fork-note">冰見線班次稀疏，錯過一班要等九十分鐘。</p>
+      </div>
+      <div class="opt rainy">
+        <p class="opt-tag">雨 ／ PLAN B</p>
+        <h4>富山市區</h4>
+        <ul>
+          <li><b>08:30</b> 新幹線 23 分到富山</li>
+          <li><b>上午</b> 環水公園、富山縣美術館 TAD（屋頂免費）</li>
+          <li><b>中午</b> 富山灣鮨　白蝦與寒鰤當季</li>
+          <li><b>下午</b> 玻璃美術館（隈研吾）</li>
+          <li><b>16:00</b> 吳羽山展望台看夕陽</li>
+        </ul>
+        <p class="fork-note">三個室內點，下雨也走得完。</p>
+      </div>
+    </div>
+  </article>
+
+  <!-- DAY 4 -->
+  <article class="day rise" style="--c:var(--kusa)">
+    <div class="day-head">
+      <p class="day-no">四日目　12.02　水</p>
+      <h3>庭園、美術館，換一間老屋</h3>
+      <p class="day-note">今天週三，昨天關的全開了。早上退房把行李拖到草紙寄放——兩家只隔八十公尺。</p>
+    </div>
+    <ol class="stops">
+      <li><time>上午</time><div><strong>Forza 退房 → 草紙寄放行李</strong><em>走路兩分鐘，同一條街</em></div></li>
+      <li><time>白天</time><div><strong>兼六園・金澤城</strong><em>十二月初剛好是雪吊完成的季節</em></div></li>
+      <li><time>下午</time><div><strong>21 世紀美術館・鈴木大拙館</strong><em>泳池那件作品要現場排隊</em></div></li>
+      <li><time>15:00</time><div><strong>金澤草紙　入住</strong><em>迎賓和菓子配加賀棒茶，晚上八點起有免費夜鳴烏龍麵</em></div></li>
+    </ol>
+  </article>
+
+  <!-- DAY 5 -->
+  <article class="day rise" style="--c:var(--murasaki)">
+    <div class="day-head">
+      <p class="day-no">五日目　12.03　木</p>
+      <h3>補最後一輪，然後回家</h3>
+      <p class="day-note">上午還有三小時。草紙對面就是黑門小路，伴手禮一次解決，不用跑遠。</p>
+    </div>
+    <ol class="stops">
+      <li><time>上午</time><div><strong>黑門小路</strong><em>金箔、和菓子、九谷燒小物</em></div></li>
+      <li><time>13:30</time><div><strong>金澤站西口　機場巴士</strong><em>車程 40 分鐘</em></div></li>
+      <li><time>16:45</time><div><strong>小松機場　起飛</strong><em>19:20 回到桃園</em></div></li>
+    </ol>
+  </article>
+</section>
+
+<section class="notes">
+  <div class="wrap">
+    <div class="sec-head rise"><h2>幾件小事</h2><span>NOTES</span></div>
+    <div class="note-grid">
+      <div class="note rise">
+        <h4>行李</h4>
+        <p>去程只有手提，<b>兩人合計 10 公斤</b>，厚外套穿身上。回程有兩件 20 公斤託運，買東西不用手軟。</p>
+      </div>
+      <div class="note rise">
+        <h4>天氣</h4>
+        <p>北陸的十二月<b>多雲多雨、日照率約三成</b>。折傘一定要帶，鞋子選防水的。</p>
+      </div>
+      <div class="note rise">
+        <h4>唯一要早起的一天</h4>
+        <p>12/1 如果走海邊那條，<b>07:45 就得出門</b>。其他四天都可以睡到自然醒。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>ISHIKAWA　·　TOYAMA　·　2026</p>
+</footer>
+
+<script>
+(function(){
+  var els=document.querySelectorAll('.rise');
+  if(!('IntersectionObserver' in window)||window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    els.forEach(function(e){e.classList.add('in')});return;
+  }
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(en,i){
+      if(en.isIntersecting){
+        var el=en.target;
+        setTimeout(function(){el.classList.add('in')},i*70);
+        io.unobserve(el);
+      }
+    });
+  },{threshold:.12,rootMargin:'0px 0px -8% 0px'});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>
