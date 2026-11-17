@@ -318,6 +318,10 @@ footer p{
 .dn-when b{display:block;font-size:.7rem;letter-spacing:.3em;font-weight:600}
 .dn-when i{display:block;font-style:normal;font-size:1.3rem;letter-spacing:.06em;margin-top:4px;color:var(--paper)}
 .dn-when small{display:block;font-size:.68rem;letter-spacing:.12em;color:var(--paper-dim);margin-top:4px}
+.dn-stay{display:block;margin-top:12px;padding-top:10px;border-top:1px dashed var(--hair);font-family:var(--sans);font-size:.72rem;letter-spacing:.04em;color:var(--paper);line-height:1.6}
+.dn-stay span{display:block;color:var(--paper-dim);font-size:.68rem}
+.day-stay{display:inline-block;margin-top:10px;font-size:.78rem;letter-spacing:.06em;color:var(--paper);border:1px solid var(--hair);padding:3px 10px;background:var(--ink-2)}
+.day-stay b{font-family:var(--mincho);color:var(--foil);font-weight:600;margin-right:6px}
 .dn-top{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 14px;margin-bottom:6px}
 .dn h4{font-family:var(--serif);font-weight:500;font-size:1.12rem;letter-spacing:.08em}
 .dn h4 small{font-family:var(--sans);font-size:.74rem;color:var(--paper-dim);letter-spacing:.04em;margin-left:6px;font-weight:300}
@@ -388,6 +392,7 @@ footer p{
   .dn{grid-template-columns:1fr;gap:12px;padding:22px 20px 20px 22px}
   .dn-when i{display:inline;font-size:1.05rem;margin-left:8px}
   .dn-when small{display:inline;margin-left:8px}
+  .dn-stay{display:block}
   .eats{grid-template-columns:1fr}
   .bench{font-size:.8rem}
   .bench .hide-m{display:none}
@@ -454,6 +459,7 @@ footer p{
       <p class="day-no">一日目　11.29　日</p>
       <h3>落地，然後把行李放下</h3>
       <p class="day-note">下午的飛機，傍晚才進市區。第一晚不排景點，吃頓好的就好。週日很多店公休，晚餐訂片町有開的那家。</p>
+      <p class="day-stay"><b>今晚住</b>Forza 金澤（第 1 晚／共 3 晚）</p>
     </div>
     <ol class="stops">
       <li><time>15:35</time><div><strong>小松機場</strong><em>出關後搭機場巴士，約 40 分鐘直達金澤站</em></div></li>
@@ -468,6 +474,7 @@ footer p{
       <p class="day-no">二日目　11.30　月</p>
       <h3>金澤的街，慢慢走</h3>
       <p class="day-note">週一美術館全休，所以今天不看展。市場、茶屋街、武家屋敷，加上一間唱片行——全部是走路可及的距離。</p>
+      <p class="day-stay"><b>今晚住</b>Forza 金澤（第 2 晚）</p>
     </div>
     <ol class="stops">
       <li><time>上午</time><div><strong>近江町市場</strong><em>もりもり寿し的北陸五点盛當早午餐，冬天是甜蝦和香箱蟹</em></div></li>
@@ -485,6 +492,7 @@ footer p{
       <p class="day-no">三日目　12.01　火</p>
       <h3>跨到富山，看天氣選路線</h3>
       <p class="day-note">十一月底立山連峰剛積滿雪，空氣也最清。晴天就去海邊看雪山浮在海上，天灰就進市區走美術館。前一晚決定。</p>
+      <p class="day-stay"><b>今晚住</b>Forza 金澤（第 3 晚）</p>
     </div>
     <div class="fork">
       <div class="opt sunny">
@@ -522,6 +530,7 @@ footer p{
       <p class="day-no">四日目　12.02　水</p>
       <h3>庭園、美術館，換一間老屋</h3>
       <p class="day-note">今天週三，昨天關的全開了。早上退房把行李拖到草紙寄放——兩家只隔八十公尺。</p>
+      <p class="day-stay"><b>今晚住</b>旅情之宿 金澤草紙（含早餐）</p>
     </div>
     <ol class="stops">
       <li><time>上午</time><div><strong>Forza 退房 → 草紙寄放行李</strong><em>走路兩分鐘，同一條街</em></div></li>
@@ -539,6 +548,7 @@ footer p{
       <p class="day-no">五日目　12.03　木</p>
       <h3>補最後一輪，然後回家</h3>
       <p class="day-note">上午還有三小時。草紙對面就是黑門小路，伴手禮一次解決，不用跑遠。</p>
+      <p class="day-stay"><b>今晚</b>回台灣 ✈︎ 19:20 抵桃園</p>
     </div>
     <ol class="stops">
       <li><time>上午</time><div><strong>黑門小路</strong><em>金箔、和菓子、九谷燒小物</em></div></li>
@@ -563,7 +573,7 @@ footer p{
   <div class="dinners">
     <!-- D1 -->
     <div class="dn rise" style="--c:var(--enji)">
-      <div class="dn-when"><b>一日目・晚</b><i>11.29 日</i><small>片町</small></div>
+      <div class="dn-when"><b>一日目・晚</b><i>11.29 日</i><small>片町</small><i class="dn-stay">🛏 今晚住 Forza 金澤<span>到店：計程車約 10 分</span></i></div>
       <div>
         <div class="dn-top"><h4>めしや 魚界人 裏片町店<small>創意和食居酒屋</small></h4><i class="bk rec">建議訂</i></div>
         <div class="score"><span class="tl">Tabelog <b>3.61</b>・Hot Restaurant 2026</span><span>Google <b>4.3</b>（263）</span><span>¥5,000–10,000</span></div>
@@ -575,7 +585,7 @@ footer p{
 
     <!-- D2 -->
     <div class="dn rise" style="--c:var(--odo)">
-      <div class="dn-when"><b>二日目・晚</b><i>11.30 月</i><small>片町</small></div>
+      <div class="dn-when"><b>二日目・晚</b><i>11.30 月</i><small>片町</small><i class="dn-stay">🛏 今晚住 Forza 金澤<span>到店：計程車約 10 分</span></i></div>
       <div>
         <div class="dn-top"><h4>食楽 かぶ菜<small>海鮮・創作居酒屋</small></h4><i class="bk must">必訂</i></div>
         <div class="score"><span class="tl">Tabelog <b>3.68</b>・居酒屋百名店 2025</span><span>Google <b>4.5</b>（417）</span><span>¥6,000–8,000</span></div>
@@ -587,7 +597,7 @@ footer p{
 
     <!-- D3 -->
     <div class="dn rise" style="--c:var(--ai)">
-      <div class="dn-when"><b>三日目・晚</b><i>12.01 火</i><small>安江町・飯店旁</small></div>
+      <div class="dn-when"><b>三日目・晚</b><i>12.01 火</i><small>安江町・飯店旁</small><i class="dn-stay">🛏 今晚住 Forza 金澤<span>走路約 2 分</span></i></div>
       <div>
         <div class="dn-top"><h4>炭魚酒菜 わなか<small>炭火・地魚・地酒</small></h4><i class="bk must">必訂</i></div>
         <div class="score"><span class="tl">Tabelog <b>3.64</b>・居酒屋百名店 2025</span><span>Google <b>4.3</b>（245）</span><span>¥8,000–10,000</span></div>
@@ -599,7 +609,7 @@ footer p{
 
     <!-- D4 -->
     <div class="dn rise" style="--c:var(--kusa)">
-      <div class="dn-when"><b>四日目・晚</b><i>12.02 水</i><small>柿木畠</small></div>
+      <div class="dn-when"><b>四日目・晚</b><i>12.02 水</i><small>柿木畠</small><i class="dn-stay">🛏 今晚住 金澤草紙<span>回程：計程車約 10 分</span></i></div>
       <div>
         <div class="dn-top"><h4>酒と人情料理 いたる 本店<small>老字號海鮮居酒屋</small></h4><i class="bk rec">建議訂</i></div>
         <div class="score"><span class="tl">Tabelog <b>3.63</b>・居酒屋百名店 2025</span><span>Google <b>4.4</b>（819）</span><span>¥4,000–6,000</span></div>
