@@ -198,6 +198,14 @@ body{
 .stops li.dine strong::before{content:"晚餐";display:inline-block;font-family:var(--mincho);font-size:.62rem;letter-spacing:.2em;color:#fff;background:#C2611A;padding:1px 7px 0;margin-right:9px;vertical-align:3px}
 .stops li.dine em a{color:#C2611A}
 .stops li.dine .bk{margin-left:8px;vertical-align:1px}
+.want{display:inline-block;font-family:var(--sans);font-style:normal;font-size:.68rem;letter-spacing:.04em;color:#8F5E17;background:rgba(196,139,60,.13);border-radius:9px;padding:1px 8px;margin:4px 4px 0 0}
+.wish{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--hair);border:1px solid var(--hair);margin:0 0 34px}
+.wish div{background:var(--ink-2);padding:14px 16px;display:grid;grid-template-columns:26px 1fr;gap:10px;align-items:start}
+.wish b{font-family:var(--mincho);color:#C2611A;font-size:1rem;line-height:1.3}
+.wish h6{font-family:var(--serif);font-size:.95rem;font-weight:600;letter-spacing:.06em;margin-bottom:3px;color:var(--paper)}
+.wish p{font-size:.8rem;color:var(--paper-dim);line-height:1.65}
+.wish p i{font-style:normal;color:var(--paper)}
+@media (max-width:760px){.wish{grid-template-columns:1fr}}
 .stops em{
   font-style:normal;font-size:.82rem;
   color:var(--paper-dim);display:block;margin-top:2px;
@@ -519,15 +527,17 @@ details.mail[open] summary::before{content:"▾ ";}
     <div class="day-head">
       <p class="day-no">二日目　11.30　月<span class="wk">週一</span></p>
       <h3>金澤的街，慢慢走</h3>
-      <p class="day-note">週一美術館全休，所以今天不看展。市場、茶屋街、武家屋敷，加上一間唱片行——全部是走路可及的距離。</p>
+      <p class="day-note">老辣妹路線的主場。早上在市場吃甜蝦、喉黑、烏賊，中午逛主計町和東茶屋街，下午聽留聲機、鑽忍者寺，晚上在片町吃かぶ菜。週一美術館全休，但這幾個點都有開。</p>
       <p class="day-stay"><b>今晚住</b>Forza 金澤（第 2 晚）</p>
     </div>
     <ol class="stops">
-      <li><time>上午</time><div><strong>近江町市場</strong><em>もりもり寿し的北陸五点盛當早午餐，冬天是甜蝦和香箱蟹</em></div></li>
-      <li><time>中午</time><div><strong>東茶屋街・主計町</strong><em>格子窗的老街，金箔與茶屋建築</em></div></li>
-      <li><time>下午</time><div><strong>尾山神社・長町武家屋敷</strong><em>神門的彩繪玻璃，土牆小巷</em></div></li>
-      <li><time>傍晚</time><div><strong>唱片行</strong><em>慢慢挑</em></div></li>
-      <li class="dine"><time>19:00</time><div><strong>食楽 かぶ菜<i class="bk must">必訂</i></strong><em>片町・小盤配酒，已請 Forza 代訂（桌位／包廂）　→ <a href="#booking">訂位進度</a></em></div></li>
+      <li><time>08:30</time><div><strong>近江町市場・もりもり寿し</strong><em>8:00 開門，早去不用排。點「北陸五点盛」＋烏賊握壽司，再到市場攤位找がすえび刺身</em><i class="want">① 甜蝦 がすえび</i><i class="want">② 喉黑</i><i class="want">③ 烏賊</i><i class="want">⑦ 大野醬油（市場找）</i></div></li>
+      <li><time>10:30</time><div><strong>主計町・八百萬本舗</strong><em>町家改建的選物店：九谷燒、北陸名品；二樓可以跟百萬先生合照</em><i class="want">④ 八百萬本舗</i><i class="want">⑤ 百萬先生</i></div></li>
+      <li><time>11:15</time><div><strong>東茶屋街</strong><em>金箔屋さくだ：免費看師傅做金箔、金箔廁所、金箔醬油；箔一東山店：整片金箔霜淇淋。午餐就在茶屋街一帶</em><i class="want">⑥ 東茶屋街</i><i class="want">⑦ 金箔醬油</i></div></li>
+      <li><time>14:00</time><div><strong>金沢蓄音器館</strong><em>尾張町，走路 10 分。11:00／14:00／16:00 有留聲機現場播放（約 30 分），週二休</em></div></li>
+      <li><time>15:30</time><div><strong>妙立寺（忍者寺）</strong><em>計程車約 10 分到寺町。導覽制、要電話預約，¥1,200、只收現金、要穿襪子；冬季最後入場約 16:00</em><i class="want">⑩ 妙立寺</i></div></li>
+      <li><time>傍晚</time><div><strong>西茶屋街 → 片町・唱片行</strong><em>寺町走過犀川就是片町，逛到晚餐</em></div></li>
+      <li class="dine"><time>19:00</time><div><strong>食楽 かぶ菜<i class="bk must">必訂</i></strong><em>片町・小盤配酒，已請 Forza 代訂（桌位／包廂）　→ <a href="#booking">訂位進度</a></em><i class="want">② 鹽烤喉黑</i></div></li>
       <li><time>睡前</time><div><strong>看一下明天的天氣</strong><em>晴或雨，決定明天去海邊還是進市區</em></div></li>
     </ol>
   </article>
@@ -575,15 +585,18 @@ details.mail[open] summary::before{content:"▾ ";}
     <div class="day-head">
       <p class="day-no">四日目　12.02　水<span class="wk">週三</span></p>
       <h3>庭園、美術館，換一間老屋</h3>
-      <p class="day-note">今天週三，昨天關的全開了。早上退房把行李拖到草紙寄放——兩家只隔八十公尺。</p>
+      <p class="day-note">今天週三，昨天關的全開了。早上退房把行李寄放到草紙（兩家只隔八十公尺），先去老喫茶店吃早餐，再沿著神社、兼六園一路走到美術館。</p>
       <p class="day-stay"><b>今晚住</b>旅情之宿 金澤草紙（含早餐）</p>
     </div>
     <ol class="stops">
-      <li><time>上午</time><div><strong>Forza 退房 → 草紙寄放行李</strong><em>走路兩分鐘，同一條街</em></div></li>
-      <li><time>白天</time><div><strong>兼六園・金澤城</strong><em>十二月初剛好是雪吊完成的季節</em></div></li>
-      <li><time>下午</time><div><strong>21 世紀美術館・鈴木大拙館</strong><em>泳池那件作品要現場排隊</em></div></li>
-      <li><time>15:00</time><div><strong>金澤草紙　入住</strong><em>迎賓和菓子配加賀棒茶</em></div></li>
-      <li class="dine"><time>17:30</time><div><strong>いたる 本店<i class="bk rec">建議訂</i></strong><em>柿木畠・美術館後面，已請 Forza 代訂　→ <a href="#booking">訂位進度</a></em></div></li>
+      <li><time>09:30</time><div><strong>Forza 退房 → 草紙寄放行李</strong><em>走路兩分鐘，同一條街</em></div></li>
+      <li><time>10:00</time><div><strong>プラザ樹（樹 miki）</strong><em>尾山町的昭和老喫茶：紅絲絨椅、迴旋樓梯、窗外小庭園。點熱壓吐司（海苔＋芥末＋起司＋蛋）和草莓果醬吐司。平日 10–16，週末休</em><i class="want">⑧ 樹 miki</i></div></li>
+      <li><time>11:00</time><div><strong>尾山神社</strong><em>就在隔壁，看神門的彩繪玻璃</em></div></li>
+      <li><time>11:30</time><div><strong>石浦神社</strong><em>水玉圓點御守、KIMA 醬；籤分得很細，最好的是「幸」</em><i class="want">⑨ 石浦神社</i></div></li>
+      <li><time>12:00</time><div><strong>兼六園・金澤城</strong><em>十二月初剛好是雪吊完成的季節</em></div></li>
+      <li><time>下午</time><div><strong>21 世紀美術館・鈴木大拙館</strong><em>泳池要買票排隊；藍色天空、花牆搖椅、測量雲的男人免費</em></div></li>
+      <li><time>16:30</time><div><strong>金澤草紙　入住</strong><em>迎賓和菓子配加賀棒茶，休息一下再出門</em></div></li>
+      <li class="dine"><time>17:30</time><div><strong>いたる 本店<i class="bk rec">建議訂</i></strong><em>柿木畠・美術館後面，已請 Forza 代訂　→ <a href="#booking">訂位進度</a></em><i class="want">① 小ガス海老唐揚げ</i><i class="want">② 喉黑鹽烤</i></div></li>
       <li><time>20:00</time><div><strong>草紙　夜鳴烏龍麵</strong><em>免費，當收尾的一碗</em></div></li>
     </ol>
   </article>
@@ -593,11 +606,14 @@ details.mail[open] summary::before{content:"▾ ";}
     <div class="day-head">
       <p class="day-no">五日目　12.03　木<span class="wk">週四</span></p>
       <h3>補最後一輪，然後回家</h3>
-      <p class="day-note">上午還有三小時。草紙對面就是黑門小路，伴手禮一次解決，不用跑遠。</p>
+      <p class="day-note">上午還有四小時。先看柳宗理的設計，再把伴手禮補齊，吃碗味噌拉麵就往車站走。回程有 20 公斤託運，醬油可以放心買。</p>
       <p class="day-stay"><b>今晚</b>回台灣 ✈︎ 19:20 抵桃園</p>
     </div>
     <ol class="stops">
-      <li><time>上午</time><div><strong>黑門小路</strong><em>金箔、和菓子、九谷燒小物</em></div></li>
+      <li><time>09:30</time><div><strong>柳宗理記念デザイン研究所</strong><em>尾張町，免費。蝴蝶凳、不鏽鋼餐具原作，部分可以摸。週二到週六開（週一休，所以排今天）</em></div></li>
+      <li><time>10:30</time><div><strong>黑門小路</strong><em>金箔、和菓子、九谷燒小物</em></div></li>
+      <li><time>11:30</time><div><strong>麺屋大河</strong><em>堀川町，車站走路可到。辛味噌拉麵＋能登豬叉燒飯，份量大</em></div></li>
+      <li><time>12:45</time><div><strong>金澤百番街あんと</strong><em>最後補貨：百萬先生周邊、大野醬油、加賀棒茶</em><i class="want">⑤ 百萬先生</i><i class="want">⑦ 大野醬油</i></div></li>
       <li><time>13:30</time><div><strong>金澤站西口　機場巴士</strong><em>車程 40 分鐘</em></div></li>
       <li><time>16:45</time><div><strong>小松機場　起飛</strong><em>19:20 回到桃園</em></div></li>
     </ol>
@@ -617,6 +633,20 @@ details.mail[open] summary::before{content:"▾ ";}
   </div>
 
 
+
+  <p class="sub-h rise" style="margin-top:0">想吃想買的 10 樣　WISHLIST</p>
+  <div class="wish rise">
+    <div><b>①</b><div><h6>很甜的蝦　がすえび</h6><p>正式名クロザコエビ，外表灰褐不起眼，比甜蝦還甜；壞得快，幾乎只在產地吃得到。<i>11/30 もりもり寿し「北陸五点盛」、近江町攤位刺身；12/2 いたる 小ガス海老唐揚げ</i></p></div></div>
+    <div><b>②</b><div><h6>喉黑　のどぐろ</h6><p>白身魚的大トロ。<i>11/30 もりもり（五点盛）、晚上かぶ菜鹽烤；12/1 わなか；12/2 いたる 鹽烤</i></p></div></div>
+    <div><b>③</b><div><h6>烏賊</h6><p>比花枝清爽、脆、帶甜。<i>11/30 もりもり烏賊握壽司；五点盛裡的螢烏賊黑作り</i></p></div></div>
+    <div><b>④</b><div><h6>八百萬本舗</h6><p>主計町的町家選物店，九谷燒、北陸名品。<i>11/30 上午</i></p></div></div>
+    <div><b>⑤</b><div><h6>百萬先生　ひゃくまんさん</h6><p>北陸新幹線吉祥物，加賀八幡起上り造型。<i>11/30 八百萬本舗二樓合照＋周邊；12/3 百番街補貨</i></p></div></div>
+    <div><b>⑥</b><div><h6>東茶屋街</h6><p>金箔屋さくだ（金箔工廠、金箔廁所）＋箔一金箔霜淇淋。<i>11/30 中午</i></p></div></div>
+    <div><b>⑦</b><div><h6>大野醬油</h6><p>石川縣大野町產，適合沾海鮮，味道清爽、香氣濃。<i>11/30 金箔屋さくだ（加金箔版）、近江町；12/3 百番街</i>。放回程託運</p></div></div>
+    <div><b>⑧</b><div><h6>樹 miki（プラザ樹）</h6><p>昭和老喫茶，熱壓吐司。平日才開。<i>12/2 10:00 早餐</i></p></div></div>
+    <div><b>⑨</b><div><h6>石浦神社</h6><p>水玉御守、KIMA 醬、細分吉籤。<i>12/2 上午，兼六園前</i></p></div></div>
+    <div><b>⑩</b><div><h6>妙立寺（忍者寺）</h6><p>4 層 7 樓、29 道樓梯的機關寺。<i>11/30 15:30，要電話預約</i>，¥1,200 現金、要穿襪子</p></div></div>
+  </div>
   <div class="track rise" id="booking">
     <div class="track-top">
       <h4>訂位進度　請 Forza 代訂</h4>
@@ -634,6 +664,7 @@ details.mail[open] summary::before{content:"▾ ";}
       <div><span>12/02 水・週三　いたる 本店　17:30・2 位</span><i class="st wait">等待回信</i></div>
       <div><span>11/29 日・週日　めしや 魚界人　（可線上訂，ebica 表單）</span><i class="st todo">尚未訂</i></div>
       <div><span>12/01 火・週二　炭魚酒菜 わなか　（只能電話）</span><i class="st todo">尚未訂</i></div>
+      <div><span>11/30 月・週一　妙立寺 忍者寺 15:30・2 位　（只能電話）</span><i class="st todo">尚未訂</i></div>
     </div>
     <details class="mail">
       <summary>看寄給飯店的信</summary>
