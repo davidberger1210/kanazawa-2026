@@ -295,6 +295,64 @@ footer p{
   letter-spacing:.34em;color:var(--paper-dim);
 }
 
+/* ---------- food ---------- */
+.food-lead{font-size:.88rem;color:var(--paper-dim);max-width:46em;letter-spacing:.03em;margin:-14px 0 30px}
+.food-lead b{color:var(--paper);font-weight:400}
+.legend{display:flex;flex-wrap:wrap;gap:10px 18px;margin-bottom:30px;font-size:.78rem;color:var(--paper-dim)}
+.legend span{display:inline-flex;align-items:center;gap:8px}
+
+.bk{
+  display:inline-block;font-family:var(--mincho);font-size:.66rem;font-weight:600;
+  letter-spacing:.16em;padding:3px 9px 2px;border:1px solid currentColor;
+  white-space:nowrap;line-height:1.5;
+}
+.bk.must{color:#E07A8C;background:rgba(168,69,90,.16)}
+.bk.rec{color:var(--odo);background:rgba(196,139,60,.12)}
+.bk.walk{color:#93B07C;background:rgba(107,138,84,.12)}
+
+.dinners{display:grid;gap:1px;background:var(--hair);border:1px solid var(--hair)}
+.dn{background:var(--ink-2);padding:26px 26px 24px;display:grid;grid-template-columns:118px 1fr;gap:24px;position:relative}
+.dn::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--c)}
+.dn-when{font-family:var(--mincho);color:var(--c)}
+.dn-when b{display:block;font-size:.7rem;letter-spacing:.3em;font-weight:600}
+.dn-when i{display:block;font-style:normal;font-size:1.3rem;letter-spacing:.06em;margin-top:4px;color:var(--paper)}
+.dn-when small{display:block;font-size:.68rem;letter-spacing:.12em;color:var(--paper-dim);margin-top:4px}
+.dn-top{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 14px;margin-bottom:6px}
+.dn h4{font-family:var(--serif);font-weight:500;font-size:1.12rem;letter-spacing:.08em}
+.dn h4 small{font-family:var(--sans);font-size:.74rem;color:var(--paper-dim);letter-spacing:.04em;margin-left:6px;font-weight:300}
+.score{display:flex;flex-wrap:wrap;gap:6px 16px;font-family:var(--mincho);font-size:.78rem;letter-spacing:.06em;color:var(--paper-dim);margin:8px 0 10px}
+.score b{color:var(--foil-hi);font-weight:600;font-size:.9rem}
+.score .tl b{color:#F0A35E}
+.dn p{font-size:.86rem;color:var(--paper-dim);letter-spacing:.03em}
+.dn p b{color:var(--paper);font-weight:400}
+.dn .warn{margin-top:8px;font-size:.8rem;color:#D9A0A9}
+.dn a{color:var(--foil);text-decoration:none;border-bottom:1px solid var(--hair);font-size:.78rem;letter-spacing:.06em}
+.dn a:hover{color:var(--foil-hi)}
+.links{margin-top:10px;display:flex;gap:16px;flex-wrap:wrap}
+
+.sub-h{font-family:var(--mincho);font-size:.72rem;letter-spacing:.34em;color:var(--foil);margin:52px 0 18px}
+.bench{width:100%;border-collapse:collapse;font-size:.86rem}
+.bench th{font-family:var(--mincho);font-weight:400;font-size:.68rem;letter-spacing:.2em;color:var(--foil);text-align:left;padding:10px 10px 10px 0;border-bottom:1px solid var(--hair)}
+.bench td{padding:12px 10px 12px 0;border-bottom:1px solid rgba(237,232,221,.08);vertical-align:top;color:var(--paper-dim)}
+.bench td:first-child{color:var(--paper)}
+.bench td.n{font-family:var(--mincho);white-space:nowrap}
+.bench td.n b{color:var(--paper);font-weight:600}
+
+.eats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--hair);border:1px solid var(--hair)}
+.eat{background:var(--ink-2);padding:22px 20px}
+.eat-tag{font-family:var(--mincho);font-size:.66rem;letter-spacing:.26em;color:var(--foil);margin-bottom:6px}
+.eat h5{font-family:var(--serif);font-weight:500;font-size:.98rem;letter-spacing:.08em;margin-bottom:4px}
+.eat .score{margin:4px 0 8px;font-size:.74rem}
+.eat p{font-size:.82rem;color:var(--paper-dim);letter-spacing:.02em}
+.eat p b{color:var(--paper);font-weight:400}
+.eat .bk{margin-top:10px}
+
+.season{margin-top:34px;padding:22px 24px;border:1px solid var(--hair);background:linear-gradient(135deg,rgba(168,69,90,.10),rgba(62,108,153,.08))}
+.season h5{font-family:var(--mincho);font-size:.72rem;letter-spacing:.3em;color:var(--foil);margin-bottom:10px}
+.season p{font-size:.86rem;color:var(--paper-dim);letter-spacing:.03em}
+.season p b{color:var(--paper);font-weight:400}
+.src{font-size:.74rem;color:var(--paper-dim);margin-top:22px;letter-spacing:.04em;opacity:.8}
+
 /* ---------- motion ---------- */
 .rise{opacity:0;transform:translateY(18px);transition:opacity .9s ease,transform .9s ease}
 .rise.in{opacity:1;transform:none}
@@ -326,6 +384,12 @@ footer p{
   .note-grid{grid-template-columns:1fr;gap:28px}
   .stops li{grid-template-columns:64px 1fr;gap:12px}
   .day{padding-left:22px}
+  .dn{grid-template-columns:1fr;gap:12px;padding:22px 20px 20px 22px}
+  .dn-when i{display:inline;font-size:1.05rem;margin-left:8px}
+  .dn-when small{display:inline;margin-left:8px}
+  .eats{grid-template-columns:1fr}
+  .bench{font-size:.8rem}
+  .bench .hide-m{display:none}
   .total{flex-direction:column;align-items:flex-start}
   .total-r{text-align:left}
 }
@@ -388,12 +452,12 @@ footer p{
     <div class="day-head">
       <p class="day-no">一日目　11.29　日</p>
       <h3>落地，然後把行李放下</h3>
-      <p class="day-note">下午的飛機，傍晚才進市區。第一晚不排景點，走去近江町那一帶吃頓好的就好。</p>
+      <p class="day-note">下午的飛機，傍晚才進市區。第一晚不排景點，吃頓好的就好。週日很多店公休，晚餐訂片町有開的那家。</p>
     </div>
     <ol class="stops">
       <li><time>15:35</time><div><strong>小松機場</strong><em>出關後搭機場巴士，約 40 分鐘直達金澤站</em></div></li>
       <li><time>17:00</time><div><strong>Forza 金澤　入住</strong><em>安江町，從車站走過來約 15 分鐘</em></div></li>
-      <li><time>晚上</time><div><strong>近江町一帶晚餐</strong><em>先挑好店，天黑後別現找</em></div></li>
+      <li><time>晚上</time><div><strong>めしや 魚界人 裏片町店</strong><em>創意和食吧台，週日有開・建議訂位　→ <a href="#food" style="color:var(--foil)">吃什麼</a></em></div></li>
     </ol>
   </article>
 
@@ -405,10 +469,11 @@ footer p{
       <p class="day-note">週一美術館全休，所以今天不看展。市場、茶屋街、武家屋敷，加上一間唱片行——全部是走路可及的距離。</p>
     </div>
     <ol class="stops">
-      <li><time>上午</time><div><strong>近江町市場</strong><em>海鮮丼當早午餐，冬天是甜蝦與松葉蟹</em></div></li>
+      <li><time>上午</time><div><strong>近江町市場</strong><em>もりもり寿し的北陸五点盛當早午餐，冬天是甜蝦和香箱蟹</em></div></li>
       <li><time>中午</time><div><strong>東茶屋街・主計町</strong><em>格子窗的老街，金箔與茶屋建築</em></div></li>
       <li><time>下午</time><div><strong>尾山神社・長町武家屋敷</strong><em>神門的彩繪玻璃，土牆小巷</em></div></li>
-      <li><time>傍晚</time><div><strong>唱片行</strong><em>今天的收尾，慢慢挑</em></div></li>
+      <li><time>傍晚</time><div><strong>唱片行</strong><em>慢慢挑</em></div></li>
+      <li><time>晚上</time><div><strong>食楽 かぶ菜</strong><em>片町，小盤配酒・必訂</em></div></li>
       <li><time>睡前</time><div><strong>看一下明天的天氣</strong><em>晴或雨，決定明天去海邊還是進市區</em></div></li>
     </ol>
   </article>
@@ -438,13 +503,16 @@ footer p{
         <ul>
           <li><b>08:30</b> 新幹線 23 分到富山</li>
           <li><b>上午</b> 環水公園、富山縣美術館 TAD（屋頂免費）</li>
-          <li><b>中午</b> 富山灣鮨　白蝦與寒鰤當季</li>
+          <li><b>中午</b> 白えび亭（富山站內）　白蝦刺身丼</li>
           <li><b>下午</b> 玻璃美術館（隈研吾）</li>
           <li><b>16:00</b> 吳羽山展望台看夕陽</li>
         </ul>
         <p class="fork-note">三個室內點，下雨也走得完。</p>
       </div>
     </div>
+    <ol class="stops" style="margin-top:18px">
+      <li><time>晚上</time><div><strong>炭魚酒菜 わなか</strong><em>Forza 同一條街，吃完走兩分鐘回飯店・必訂</em></div></li>
+    </ol>
   </article>
 
   <!-- DAY 4 -->
@@ -458,7 +526,9 @@ footer p{
       <li><time>上午</time><div><strong>Forza 退房 → 草紙寄放行李</strong><em>走路兩分鐘，同一條街</em></div></li>
       <li><time>白天</time><div><strong>兼六園・金澤城</strong><em>十二月初剛好是雪吊完成的季節</em></div></li>
       <li><time>下午</time><div><strong>21 世紀美術館・鈴木大拙館</strong><em>泳池那件作品要現場排隊</em></div></li>
-      <li><time>15:00</time><div><strong>金澤草紙　入住</strong><em>迎賓和菓子配加賀棒茶，晚上八點起有免費夜鳴烏龍麵</em></div></li>
+      <li><time>15:00</time><div><strong>金澤草紙　入住</strong><em>迎賓和菓子配加賀棒茶</em></div></li>
+      <li><time>17:30</time><div><strong>いたる 本店</strong><em>柿木畠，美術館後面・建議訂位</em></div></li>
+      <li><time>20:00</time><div><strong>草紙　夜鳴烏龍麵</strong><em>免費，當收尾的一碗</em></div></li>
     </ol>
   </article>
 
@@ -475,6 +545,132 @@ footer p{
       <li><time>16:45</time><div><strong>小松機場　起飛</strong><em>19:20 回到桃園</em></div></li>
     </ol>
   </article>
+</section>
+
+<hr class="foil">
+
+<section class="section wrap" id="food">
+  <div class="sec-head rise"><h2>吃什麼</h2><span>WHERE TO EAT</span></div>
+  <p class="food-lead rise">起點是福岡的 <b>めしや コヤマパーキング</b>：小盤創意和食配清酒，吧台、開放廚房，一人 ¥4,000–8,000。照這個方向，用 <b>Tabelog</b> 和 <b>Google 地圖</b>的評價交叉比對，再對照每天的動線和公休日，一晚排一家。<b>11/29 是週日、11/30 是週一</b>，金澤很多居酒屋這兩天公休，已經避開。</p>
+
+  <div class="legend rise">
+    <span><i class="bk must">必訂</i>不訂幾乎進不去</span>
+    <span><i class="bk rec">建議訂</i>可以現場排，但訂了比較穩</span>
+    <span><i class="bk walk">免訂</i>直接去</span>
+  </div>
+
+  <div class="dinners">
+    <!-- D1 -->
+    <div class="dn rise" style="--c:var(--enji)">
+      <div class="dn-when"><b>一日目・晚</b><i>11.29 日</i><small>片町</small></div>
+      <div>
+        <div class="dn-top"><h4>めしや 魚界人 裏片町店<small>創意和食居酒屋</small></h4><i class="bk rec">建議訂</i></div>
+        <div class="score"><span class="tl">Tabelog <b>3.61</b>・Hot Restaurant 2026</span><span>Google <b>4.3</b>（263）</span><span>¥5,000–10,000</span></div>
+        <p>店名一樣叫「めしや」，跟 Koyama Parking 最像的一家：<b>現場感很強的吧台，用九谷燒的器皿擺盤</b>。招牌是刺身拼盤，也有金澤關東煮和石川地酒。<b>週日照常營業（16:00–24:00）</b>，所以排在第一晚。</p>
+        <p class="warn">未滿 20 歲謝絕入店。從安江町搭計程車約 10 分鐘。</p>
+        <div class="links"><a href="https://tabelog.com/ishikawa/A1701/A170101/17013619/" target="_blank" rel="noopener">Tabelog ↗</a><a href="https://www.google.com/maps/search/?api=1&query=めしや魚界人+裏片町店" target="_blank" rel="noopener">Google 地圖 ↗</a></div>
+      </div>
+    </div>
+
+    <!-- D2 -->
+    <div class="dn rise" style="--c:var(--odo)">
+      <div class="dn-when"><b>二日目・晚</b><i>11.30 月</i><small>片町</small></div>
+      <div>
+        <div class="dn-top"><h4>食楽 かぶ菜<small>海鮮・創作居酒屋</small></h4><i class="bk must">必訂</i></div>
+        <div class="score"><span class="tl">Tabelog <b>3.68</b>・居酒屋百名店 2025</span><span>Google <b>4.5</b>（417）</span><span>¥6,000–8,000</span></div>
+        <p>夫妻兩人經營，<b>小盤配酒是強項</b>。評論最常提到烤白子、寒鰤刺身（一盤有好幾個部位）、鹽烤喉黑。也有台灣客人寫說四個人吃完才三千多台幣。週日公休，週一有開。</p>
+        <p class="warn">晚上常客滿，Tabelog 上有人提前一週打電話訂位。菜單只有手寫日文，點菜時先跟店員確認價錢。</p>
+        <div class="links"><a href="https://www.google.com/maps/search/?api=1&query=食楽+かぶ菜+金沢" target="_blank" rel="noopener">Google 地圖 ↗</a><span style="font-size:.78rem;color:var(--paper-dim)">☎ 076-260-7899</span></div>
+      </div>
+    </div>
+
+    <!-- D3 -->
+    <div class="dn rise" style="--c:var(--ai)">
+      <div class="dn-when"><b>三日目・晚</b><i>12.01 火</i><small>安江町・飯店旁</small></div>
+      <div>
+        <div class="dn-top"><h4>炭魚酒菜 わなか<small>炭火・地魚・地酒</small></h4><i class="bk must">必訂</i></div>
+        <div class="score"><span class="tl">Tabelog <b>3.64</b>・居酒屋百名店 2025</span><span>Google <b>4.3</b>（245）</span><span>¥8,000–10,000</span></div>
+        <p>就在 Forza 同一條街（安江町 18-5-1）。從富山回來累了，<b>吃完走兩分鐘就到飯店</b>。北陸鮮魚用炭火烤，常備約八款北陸地酒，有吧台座位。黑板上的當日限定菜色是重點。</p>
+        <p class="warn">週日公休。沒有英文菜單，但老闆會把食材拿出來介紹。</p>
+        <div class="links"><a href="https://www.google.com/maps/search/?api=1&query=炭魚酒菜+わなか+金沢" target="_blank" rel="noopener">Google 地圖 ↗</a><span style="font-size:.78rem;color:var(--paper-dim)">☎ 076-255-0688</span></div>
+      </div>
+    </div>
+
+    <!-- D4 -->
+    <div class="dn rise" style="--c:var(--kusa)">
+      <div class="dn-when"><b>四日目・晚</b><i>12.02 水</i><small>柿木畠</small></div>
+      <div>
+        <div class="dn-top"><h4>酒と人情料理 いたる 本店<small>老字號海鮮居酒屋</small></h4><i class="bk rec">建議訂</i></div>
+        <div class="score"><span class="tl">Tabelog <b>3.63</b>・居酒屋百名店 2025</span><span>Google <b>4.4</b>（819）</span><span>¥4,000–6,000</span></div>
+        <p>就在 21 世紀美術館後面，看完展走過去剛好。<b>名物是竹筴魚味噌拌（なめろう）和醋鯖魚三明治</b>，另外有喉黑鹽烤、刺身桶盛、治部煮。有英文菜單。吃完回草紙，還趕得上 20:00 的免費夜鳴烏龍麵。</p>
+        <p class="warn">17:30 開門。沒訂位的話 17:00 就要去排，第一輪只放大約 12 人。</p>
+        <div class="links"><a href="https://tabelog.com/ishikawa/A1701/A170101/17000009/" target="_blank" rel="noopener">Tabelog ↗</a><a href="https://www.google.com/maps/search/?api=1&query=いたる+本店+金沢" target="_blank" rel="noopener">Google 地圖 ↗</a><span style="font-size:.78rem;color:var(--paper-dim)">☎ 076-221-4194</span></div>
+      </div>
+    </div>
+  </div>
+
+  <p class="sub-h rise">備案　BACKUP</p>
+  <table class="bench rise">
+    <thead><tr><th>店</th><th>Tabelog</th><th>Google</th><th class="hide-m">價位</th><th>公休</th><th>訂位</th></tr></thead>
+    <tbody>
+      <tr><td>旬魚季菜 とと桜<br><small style="color:var(--paper-dim)">片町・老屋改裝・有英文菜單</small></td><td class="n"><b>3.55</b></td><td class="n"><b>4.3</b>（739）</td><td class="hide-m">¥5–8k</td><td>無休</td><td><i class="bk rec">建議訂</i></td></tr>
+      <tr><td>大衆割烹 山長<br><small style="color:var(--paper-dim)">安江町・家庭式・只收現金</small></td><td class="n">—</td><td class="n"><b>4.6</b>（99）</td><td class="hide-m">¥3–7k</td><td>週日</td><td><i class="bk walk">免訂</i></td></tr>
+      <tr><td>おでん居酒屋 三幸<br><small style="color:var(--paper-dim)">片町・金澤關東煮・みゆき揚げ</small></td><td class="n">—</td><td class="n"><b>4.4</b>（1,082）</td><td class="hide-m">¥3–6k</td><td>週日・假日</td><td><i class="bk walk">免訂</i></td></tr>
+      <tr><td>こいで<br><small style="color:var(--paper-dim)">犒賞一餐・只有和室座位・和式廁所</small></td><td class="n"><b>3.83</b></td><td class="n"><b>4.1</b>（87）</td><td class="hide-m">¥10k+</td><td>週日・假日</td><td><i class="bk must">必訂</i></td></tr>
+    </tbody>
+  </table>
+
+  <p class="sub-h rise">白天　DAYTIME</p>
+  <div class="eats">
+    <div class="eat rise">
+      <p class="eat-tag">11.30 早午餐・近江町</p>
+      <h5>もりもり寿し 近江町店</h5>
+      <div class="score"><span>Google <b>4.0</b>（2,994）</span></div>
+      <p>師傅當面捏的迴轉壽司。點<b>「北陸五点盛」</b>：喉黑、がすえび、螢烏賊黑作り。8:00 開門，早點去不用排。</p>
+      <i class="bk walk">免訂</i>
+    </div>
+    <div class="eat rise">
+      <p class="eat-tag">11.30 同場備案</p>
+      <h5>近江町市場寿し 本店</h5>
+      <div class="score"><span>Google <b>3.9</b>（2,237）</span></div>
+      <p>早上開店就滿座的市場壽司店，主打海鮮丼和白板上的當季握壽司。<b>喉黑魚雜湯、香箱蟹味噌湯</b>值得點。無休。</p>
+      <i class="bk walk">免訂</i>
+    </div>
+    <div class="eat rise">
+      <p class="eat-tag">12.01 雨天 B・富山站</p>
+      <h5>白えび亭 富山駅本店</h5>
+      <div class="score"><span>Google <b>4.2</b>（2,220）</span><span>¥1–2k</span></div>
+      <p>白蝦天丼的元祖。<b>白えび刺身丼</b>用的白蝦大約 90 隻，都是手工剝殼。在車站裡面，無休。</p>
+      <i class="bk walk">免訂</i>
+    </div>
+    <div class="eat rise">
+      <p class="eat-tag">12.01 晴天 A・冰見（加碼）</p>
+      <h5>氷見魚市場食堂</h5>
+      <div class="score"><span class="tl">Tabelog <b>3.59</b>・食堂百名店 2026</span><span>Google <b>4.1</b>（3,629）</span></div>
+      <p>雨晴再往北兩站就是冰見，在漁港二樓。<b>十二月正好是冰見寒鰤的季節</b>。去的話，下午的高岡行程要壓縮。</p>
+      <i class="bk walk">免訂</i>
+    </div>
+    <div class="eat rise">
+      <p class="eat-tag">隨時・片町</p>
+      <h5>金沢おでん 赤玉本店</h5>
+      <div class="score"><span class="tl">Tabelog <b>3.49</b></span><span>Google <b>3.4</b>（1,477）</span></div>
+      <p>昭和二年創業的關東煮老店。<b>週一公休，週日中午有開</b>。兩邊評分都普通，比較適合體驗一下，不用專程。</p>
+      <i class="bk walk">免訂</i>
+    </div>
+    <div class="eat rise">
+      <p class="eat-tag">注意・評價落差</p>
+      <h5>井ノ弥（近江町）</h5>
+      <div class="score"><span>Google <b>3.4</b>（607）</span></div>
+      <p>很多金澤美食文都會寫到的海鮮丼名店，但 <b>Google 評價只有 3.4</b>，排隊也久，不推薦專程去。</p>
+    </div>
+  </div>
+
+  <div class="season rise">
+    <h5>這趟要吃的季節限定</h5>
+    <p><b>香箱蟹</b>（母松葉蟹）11 月 6 日解禁，產季只到年底，剛好碰上；店裡黑板有寫就點。<b>寒鰤</b>十二月開始最肥，冰見和能登的最有名。<b>喉黑</b>全年都有，鹽烤最經典。<b>白蝦</b>是富山灣才有的。</p>
+  </div>
+
+  <p class="src">資料：Tabelog 分數與百名店紀錄、Google 地圖評分與評論數，查於 2026.11.17。營業時間和公休日以店家當天公告為準，出發前再確認一次。</p>
 </section>
 
 <hr class="foil">
