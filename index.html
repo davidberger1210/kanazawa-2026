@@ -358,6 +358,42 @@ footer p{
 .season p b{color:var(--paper);font-weight:400}
 .src{font-size:.74rem;color:var(--paper-dim);margin-top:22px;letter-spacing:.04em;opacity:.8}
 
+/* ---------- booking tracker ---------- */
+.track{border:1px solid var(--hair);background:var(--ink-2);padding:26px 26px 22px;margin:0 0 34px}
+.track-top{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:8px 16px;margin-bottom:18px}
+.track-top h4{font-family:var(--serif);font-weight:500;font-size:1.06rem;letter-spacing:.1em}
+.track-top .wait{font-family:var(--mincho);font-size:.78rem;letter-spacing:.08em;color:var(--paper-dim)}
+.track-top .wait b{color:#C2611A;font-weight:600}
+.bar{height:6px;background:rgba(34,32,28,.08);position:relative;overflow:hidden;margin-bottom:16px}
+.bar i{position:absolute;left:0;top:0;bottom:0;width:38%;background:linear-gradient(90deg,var(--foil),#C2611A)}
+.bar i::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent,rgba(255,255,255,.65),transparent);animation:shim 1.8s linear infinite;transform:translateX(-100%)}
+@keyframes shim{to{transform:translateX(250%)}}
+@media (prefers-reduced-motion:reduce){.bar i::after{animation:none}}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;list-style:none}
+.steps li{font-size:.8rem;color:var(--paper-dim);letter-spacing:.03em;padding-left:22px;position:relative;line-height:1.55}
+.steps li::before{content:"";position:absolute;left:0;top:3px;width:12px;height:12px;border:1.5px solid var(--hair);border-radius:50%;background:var(--ink)}
+.steps li.done::before{background:var(--kusa);border-color:var(--kusa)}
+.steps li.now::before{border-color:#C2611A;background:#C2611A;animation:pulse 1.6s ease-in-out infinite}
+@keyframes pulse{50%{opacity:.35}}
+.steps li b{display:block;color:var(--paper);font-weight:500;font-size:.84rem}
+.track-rows{margin-top:18px;border-top:1px dashed var(--hair);padding-top:12px;display:grid;gap:6px}
+.track-rows div{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:.84rem}
+.track-rows span{color:var(--paper-dim)}
+.st{font-family:var(--mincho);font-size:.7rem;letter-spacing:.14em;padding:2px 8px;border:1px solid currentColor;white-space:nowrap}
+.st.wait{color:#C2611A;background:rgba(194,97,26,.08)}
+.st.todo{color:var(--paper-dim)}
+.st.ok{color:#4E6B3A;background:rgba(107,138,84,.12)}
+details.mail{margin-top:16px;border:1px solid var(--hair);background:var(--ink)}
+details.mail summary{cursor:pointer;padding:11px 14px;font-size:.82rem;letter-spacing:.06em;color:var(--foil);list-style:none}
+details.mail summary::-webkit-details-marker{display:none}
+details.mail summary::before{content:"▸ ";}
+details.mail[open] summary::before{content:"▾ ";}
+.mail-body{padding:4px 16px 16px;display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.mail-body h6{font-family:var(--mincho);font-size:.66rem;letter-spacing:.26em;color:var(--foil);font-weight:600;margin-bottom:6px}
+.mail-body pre{white-space:pre-wrap;font-family:var(--sans);font-size:.78rem;line-height:1.75;color:var(--paper);margin:0}
+.mail-meta{grid-column:1/-1;font-size:.74rem;color:var(--paper-dim);border-bottom:1px solid var(--hair);padding-bottom:8px}
+@media (max-width:760px){.steps{grid-template-columns:1fr 1fr}.mail-body{grid-template-columns:1fr}.track{padding:20px 18px}}
+
 /* ---------- motion ---------- */
 .rise{opacity:0;transform:translateY(18px);transition:opacity .9s ease,transform .9s ease}
 .rise.in{opacity:1;transform:none}
@@ -571,6 +607,80 @@ footer p{
     <span><i class="bk walk">免訂</i>直接去</span>
   </div>
 
+
+  <div class="track rise" id="booking">
+    <div class="track-top">
+      <h4>訂位進度　請 Forza 代訂</h4>
+      <span class="wait">已等待 <b id="waited">—</b>　·　11/20 前沒回就改真人代打</span>
+    </div>
+    <div class="bar"><i id="barfill"></i></div>
+    <ol class="steps">
+      <li class="done"><b>寄出請求</b>11/17 20:57 官網表單</li>
+      <li class="now"><b>等飯店回信</b>通常 1–2 天</li>
+      <li><b>確認訂位</b>回信寫明時間與座位</li>
+      <li><b>備案</b>11/20 未回 → 真人代打</li>
+    </ol>
+    <div class="track-rows">
+      <div><span>11/30 月　かぶ菜　19:00・2 位・桌位或包廂</span><i class="st wait">等待回信</i></div>
+      <div><span>12/02 水　いたる 本店　17:30・2 位</span><i class="st wait">等待回信</i></div>
+      <div><span>11/29 日　めしや 魚界人　（可線上訂，ebica 表單）</span><i class="st todo">尚未訂</i></div>
+      <div><span>12/01 火　炭魚酒菜 わなか　（只能電話）</span><i class="st todo">尚未訂</i></div>
+    </div>
+    <details class="mail">
+      <summary>看寄給飯店的信</summary>
+      <div class="mail-body">
+        <p class="mail-meta">寄出：2026.11.17 20:57（台灣時間）・管道：hotelforza.jp/kanazawa 聯絡表單・個資已遮蔽</p>
+        <div><h6>日文原文</h6><pre>【件名】11/29宿泊予定：近隣レストランの予約代行のお願い
+
+ホテルフォルツァ金沢 フロント御中
+
+いつもお世話になっております。
+11月29日（日）から3泊でリラクシングツインを予約している SHIH YUAN HSIAO と申します。
+（予約番号：＊＊＊）
+
+台湾から参ります。日本語での電話が難しいため、大変恐縮ですが、
+下記2店舗の予約を代わりにお電話でお願いできませんでしょうか。
+
+① かぶ菜（片町）　TEL 076-260-7899
+　・日時：11月30日（月）19:00
+　　（難しい場合は 18:30〜20:00 の間でも構いません）
+　・人数：大人2名
+　・席：テーブル席または個室を希望（カウンター席以外）
+
+② いたる 本店（柿木畠）　TEL 076-221-4194
+　・日時：12月2日（水）17:30
+　　（難しい場合は 18:00 でも構いません）
+　・人数：大人2名
+　・席：カウンター・座敷どちらでも可
+
+予約名は SHIH YUAN HSIAO、連絡先は下記メールアドレスでお願いいたします。
+結果をメールでお知らせいただけますと大変助かります。
+満席の場合も、その旨ご連絡いただければ幸いです。
+
+お忙しいところ恐れ入りますが、どうぞよろしくお願いいたします。
+
+SHIH YUAN HSIAO
+（メール・電話番号は非公開）</pre></div>
+        <div><h6>中文對照</h6><pre>主旨：11/29 入住，請飯店代訂附近餐廳
+
+我們從 11/29（日）起住 3 晚，因為不會用日文打電話，想請飯店代為致電訂以下兩家：
+
+① かぶ菜（片町）☎ 076-260-7899
+　・11/30（一）19:00
+　　（不行的話 18:30–20:00 之間都可以）
+　・大人 2 位
+　・希望桌位或包廂（不要吧台）
+
+② いたる 本店（柿木畠）☎ 076-221-4194
+　・12/2（三）17:30
+　　（不行的話 18:00 也可以）
+　・大人 2 位
+　・吧台或座敷都可以
+
+訂位名字 SHIH YUAN HSIAO，請用 email 回覆結果；客滿也請告知。</pre></div>
+      </div>
+    </details>
+  </div>
   <div class="dinners">
     <!-- D1 -->
     <div class="dn rise" style="--c:var(--enji)">
@@ -746,6 +856,19 @@ footer p{
   <p>ISHIKAWA　·　TOYAMA　·　2026</p>
 </footer>
 
+<script>
+(function(){
+  var sent=new Date('2026-11-17T20:57:00+08:00'), due=new Date('2026-11-20T20:57:00+08:00');
+  function tick(){
+    var now=new Date(), ms=now-sent, h=Math.floor(ms/36e5), m=Math.floor(ms%36e5/6e4);
+    var w=document.getElementById('waited'); if(!w) return;
+    w.textContent = ms<0 ? '—' : (h>=24 ? Math.floor(h/24)+' 天 '+(h%24)+' 小時' : h+' 小時 '+m+' 分');
+    var pct=Math.max(8,Math.min(100,(ms/(due-sent))*100));
+    document.getElementById('barfill').style.width=pct+'%';
+  }
+  tick(); setInterval(tick,60000);
+})();
+</script>
 <script>
 (function(){
   var els=document.querySelectorAll('.rise');
