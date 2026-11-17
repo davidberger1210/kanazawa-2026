@@ -2,6 +2,7 @@
 <html lang="zh-Hant">
 <head>
 <meta charset="UTF-8">
+<meta name="theme-color" content="#F5F0E6">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>金澤・富山 ｜ 2026 冬 五日</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,14 +18,14 @@
   --murasaki:#7B5A8C;    /* 古代紫 */
 
   /* ground & foil */
-  --ink:#0F1320;
-  --ink-2:#161B2C;
-  --ink-3:#1E2438;
-  --foil:#C9A94E;
-  --foil-hi:#F2E1A8;
-  --paper:#EDE8DD;
-  --paper-dim:#A9A392;
-  --hair:rgba(201,169,78,.22);
+  --ink:#F5F0E6;
+  --ink-2:#ECE5D6;
+  --ink-3:#E3DBC9;
+  --foil:#9C7A2B;
+  --foil-hi:#C9A24A;
+  --paper:#22201C;
+  --paper-dim:#6E6658;
+  --hair:rgba(156,122,43,.28);
 
   --serif:"Noto Serif TC",serif;
   --sans:"Noto Sans TC",sans-serif;
@@ -62,7 +63,7 @@ body{
 .hero::after{
   content:"";position:absolute;inset:0;
   background:
-    radial-gradient(120% 80% at 78% 12%,rgba(201,169,78,.14),transparent 55%),
+    radial-gradient(120% 80% at 78% 12%,rgba(201,169,78,.20),transparent 55%),
     radial-gradient(90% 60% at 8% 92%,rgba(62,108,153,.16),transparent 60%);
   pointer-events:none;
 }
@@ -85,7 +86,7 @@ body{
   margin-bottom:26px;
 }
 .hero h1 .gold{
-  background:linear-gradient(160deg,var(--foil-hi),var(--foil) 45%,#8E7327 90%);
+  background:linear-gradient(160deg,#C9A24A,#9C7A2B 45%,#6B5217 90%);
   -webkit-background-clip:text;background-clip:text;
   color:transparent;
 }
@@ -180,7 +181,7 @@ body{
 .stops li{
   display:grid;grid-template-columns:74px 1fr;
   gap:18px;padding:11px 0;
-  border-top:1px solid rgba(237,232,221,.08);
+  border-top:1px solid rgba(34,32,28,.09);
 }
 .stops li:first-child{border-top:0}
 .stops time{
@@ -245,7 +246,7 @@ body{
   display:grid;grid-template-columns:1fr auto;
   gap:20px;align-items:baseline;
   padding:11px 0 0;margin-top:9px;
-  border-top:1px dashed rgba(201,169,78,.26);
+  border-top:1px dashed rgba(156,122,43,.35);
 }
 .led-sum span{font-size:.84rem;color:var(--paper-dim);letter-spacing:.06em}
 .led-sum b{font-family:var(--mincho);font-size:.97rem;color:var(--paper-dim)}
@@ -266,7 +267,7 @@ body{
 .total-r .big{
   font-family:var(--serif);font-weight:700;
   font-size:clamp(2.1rem,6vw,3rem);line-height:1;letter-spacing:.02em;
-  background:linear-gradient(160deg,var(--foil-hi),var(--foil) 45%,#8E7327 90%);
+  background:linear-gradient(160deg,#C9A24A,#9C7A2B 45%,#6B5217 90%);
   -webkit-background-clip:text;background-clip:text;color:transparent;
 }
 .total-r .per{
@@ -306,9 +307,9 @@ footer p{
   letter-spacing:.16em;padding:3px 9px 2px;border:1px solid currentColor;
   white-space:nowrap;line-height:1.5;
 }
-.bk.must{color:#E07A8C;background:rgba(168,69,90,.16)}
-.bk.rec{color:var(--odo);background:rgba(196,139,60,.12)}
-.bk.walk{color:#93B07C;background:rgba(107,138,84,.12)}
+.bk.must{color:#9E3A50;background:rgba(168,69,90,.10)}
+.bk.rec{color:#8F5E17;background:rgba(196,139,60,.14)}
+.bk.walk{color:#4E6B3A;background:rgba(107,138,84,.12)}
 
 .dinners{display:grid;gap:1px;background:var(--hair);border:1px solid var(--hair)}
 .dn{background:var(--ink-2);padding:26px 26px 24px;display:grid;grid-template-columns:118px 1fr;gap:24px;position:relative}
@@ -321,19 +322,19 @@ footer p{
 .dn h4{font-family:var(--serif);font-weight:500;font-size:1.12rem;letter-spacing:.08em}
 .dn h4 small{font-family:var(--sans);font-size:.74rem;color:var(--paper-dim);letter-spacing:.04em;margin-left:6px;font-weight:300}
 .score{display:flex;flex-wrap:wrap;gap:6px 16px;font-family:var(--mincho);font-size:.78rem;letter-spacing:.06em;color:var(--paper-dim);margin:8px 0 10px}
-.score b{color:var(--foil-hi);font-weight:600;font-size:.9rem}
-.score .tl b{color:#F0A35E}
+.score b{color:#7A5E1C;font-weight:600;font-size:.9rem}
+.score .tl b{color:#C2611A}
 .dn p{font-size:.86rem;color:var(--paper-dim);letter-spacing:.03em}
 .dn p b{color:var(--paper);font-weight:400}
-.dn .warn{margin-top:8px;font-size:.8rem;color:#D9A0A9}
+.dn .warn{margin-top:8px;font-size:.8rem;color:#9E3A50}
 .dn a{color:var(--foil);text-decoration:none;border-bottom:1px solid var(--hair);font-size:.78rem;letter-spacing:.06em}
-.dn a:hover{color:var(--foil-hi)}
+.dn a:hover{color:#6B5217}
 .links{margin-top:10px;display:flex;gap:16px;flex-wrap:wrap}
 
 .sub-h{font-family:var(--mincho);font-size:.72rem;letter-spacing:.34em;color:var(--foil);margin:52px 0 18px}
 .bench{width:100%;border-collapse:collapse;font-size:.86rem}
 .bench th{font-family:var(--mincho);font-weight:400;font-size:.68rem;letter-spacing:.2em;color:var(--foil);text-align:left;padding:10px 10px 10px 0;border-bottom:1px solid var(--hair)}
-.bench td{padding:12px 10px 12px 0;border-bottom:1px solid rgba(237,232,221,.08);vertical-align:top;color:var(--paper-dim)}
+.bench td{padding:12px 10px 12px 0;border-bottom:1px solid rgba(34,32,28,.09);vertical-align:top;color:var(--paper-dim)}
 .bench td:first-child{color:var(--paper)}
 .bench td.n{font-family:var(--mincho);white-space:nowrap}
 .bench td.n b{color:var(--paper);font-weight:600}
