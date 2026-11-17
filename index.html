@@ -318,8 +318,8 @@ footer p{
 .dn-when b{display:block;font-size:.7rem;letter-spacing:.3em;font-weight:600}
 .dn-when i{display:block;font-style:normal;font-size:1.3rem;letter-spacing:.06em;margin-top:4px;color:var(--paper)}
 .dn-when small{display:block;font-size:.68rem;letter-spacing:.12em;color:var(--paper-dim);margin-top:4px}
-.dn-stay{display:block;margin-top:12px;padding-top:10px;border-top:1px dashed var(--hair);font-family:var(--sans);font-size:.72rem;letter-spacing:.04em;color:var(--paper);line-height:1.6}
-.dn-stay span{display:block;color:var(--paper-dim);font-size:.68rem}
+.dn-when .dn-stay{display:block;margin-top:12px;font-style:normal;padding-top:10px;border-top:1px dashed var(--hair);font-family:var(--sans);font-size:.72rem;letter-spacing:.04em;color:var(--paper);line-height:1.6}
+.dn-when .dn-stay span{display:block;margin:0;color:var(--paper-dim);font-size:.68rem}
 .day-stay{display:inline-block;margin-top:10px;font-size:.78rem;letter-spacing:.06em;color:var(--paper);border:1px solid var(--hair);padding:3px 10px;background:var(--ink-2)}
 .day-stay b{font-family:var(--mincho);color:var(--foil);font-weight:600;margin-right:6px}
 .dn-top{display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 14px;margin-bottom:6px}
@@ -392,7 +392,8 @@ footer p{
   .dn{grid-template-columns:1fr;gap:12px;padding:22px 20px 20px 22px}
   .dn-when i{display:inline;font-size:1.05rem;margin-left:8px}
   .dn-when small{display:inline;margin-left:8px}
-  .dn-stay{display:block}
+  .dn-when .dn-stay{display:block;font-size:.74rem}
+  .dn-when .dn-stay span{display:inline;margin-left:8px}
   .eats{grid-template-columns:1fr}
   .bench{font-size:.8rem}
   .bench .hide-m{display:none}
@@ -573,7 +574,7 @@ footer p{
   <div class="dinners">
     <!-- D1 -->
     <div class="dn rise" style="--c:var(--enji)">
-      <div class="dn-when"><b>一日目・晚</b><i>11.29 日</i><small>片町</small><i class="dn-stay">🛏 今晚住 Forza 金澤<span>到店：計程車約 10 分</span></i></div>
+      <div class="dn-when"><b>一日目・晚</b><i>11.29 日</i><small>片町</small><span class="dn-stay">🛏 今晚住 Forza 金澤<span>到店：計程車約 10 分</span></span></div>
       <div>
         <div class="dn-top"><h4>めしや 魚界人 裏片町店<small>創意和食居酒屋</small></h4><i class="bk rec">建議訂</i></div>
         <div class="score"><span class="tl">Tabelog <b>3.61</b>・Hot Restaurant 2026</span><span>Google <b>4.3</b>（263）</span><span>¥5,000–10,000</span></div>
@@ -585,7 +586,7 @@ footer p{
 
     <!-- D2 -->
     <div class="dn rise" style="--c:var(--odo)">
-      <div class="dn-when"><b>二日目・晚</b><i>11.30 月</i><small>片町</small><i class="dn-stay">🛏 今晚住 Forza 金澤<span>到店：計程車約 10 分</span></i></div>
+      <div class="dn-when"><b>二日目・晚</b><i>11.30 月</i><small>片町</small><span class="dn-stay">🛏 今晚住 Forza 金澤<span>到店：計程車約 10 分</span></span></div>
       <div>
         <div class="dn-top"><h4>食楽 かぶ菜<small>海鮮・創作居酒屋</small></h4><i class="bk must">必訂</i></div>
         <div class="score"><span class="tl">Tabelog <b>3.68</b>・居酒屋百名店 2025</span><span>Google <b>4.5</b>（417）</span><span>¥6,000–8,000</span></div>
@@ -597,7 +598,7 @@ footer p{
 
     <!-- D3 -->
     <div class="dn rise" style="--c:var(--ai)">
-      <div class="dn-when"><b>三日目・晚</b><i>12.01 火</i><small>安江町・飯店旁</small><i class="dn-stay">🛏 今晚住 Forza 金澤<span>走路約 2 分</span></i></div>
+      <div class="dn-when"><b>三日目・晚</b><i>12.01 火</i><small>安江町・飯店旁</small><span class="dn-stay">🛏 今晚住 Forza 金澤<span>走路約 2 分</span></span></div>
       <div>
         <div class="dn-top"><h4>炭魚酒菜 わなか<small>炭火・地魚・地酒</small></h4><i class="bk must">必訂</i></div>
         <div class="score"><span class="tl">Tabelog <b>3.64</b>・居酒屋百名店 2025</span><span>Google <b>4.3</b>（245）</span><span>¥8,000–10,000</span></div>
@@ -609,7 +610,7 @@ footer p{
 
     <!-- D4 -->
     <div class="dn rise" style="--c:var(--kusa)">
-      <div class="dn-when"><b>四日目・晚</b><i>12.02 水</i><small>柿木畠</small><i class="dn-stay">🛏 今晚住 金澤草紙<span>回程：計程車約 10 分</span></i></div>
+      <div class="dn-when"><b>四日目・晚</b><i>12.02 水</i><small>柿木畠</small><span class="dn-stay">🛏 今晚住 金澤草紙<span>回程：計程車約 10 分</span></span></div>
       <div>
         <div class="dn-top"><h4>酒と人情料理 いたる 本店<small>老字號海鮮居酒屋</small></h4><i class="bk rec">建議訂</i></div>
         <div class="score"><span class="tl">Tabelog <b>3.63</b>・居酒屋百名店 2025</span><span>Google <b>4.4</b>（819）</span><span>¥4,000–6,000</span></div>
