@@ -191,6 +191,13 @@ body{
   letter-spacing:.1em;color:var(--foil);padding-top:1px;
 }
 .stops strong{font-weight:500;font-size:.97rem;display:block;letter-spacing:.04em}
+.stops li.dine{background:linear-gradient(90deg,rgba(194,97,26,.10),rgba(194,97,26,.02) 70%,transparent);border-left:3px solid #C2611A;padding:14px 12px 14px 12px;margin:6px 0;border-top:0}
+.stops li.dine + li{border-top:0}
+.stops li.dine time{color:#C2611A;font-weight:600}
+.stops li.dine strong{font-family:var(--serif);font-size:1.08rem;font-weight:600;color:var(--paper)}
+.stops li.dine strong::before{content:"晚餐";display:inline-block;font-family:var(--mincho);font-size:.62rem;letter-spacing:.2em;color:#fff;background:#C2611A;padding:1px 7px 0;margin-right:9px;vertical-align:3px}
+.stops li.dine em a{color:#C2611A}
+.stops li.dine .bk{margin-left:8px;vertical-align:1px}
 .stops em{
   font-style:normal;font-size:.82rem;
   color:var(--paper-dim);display:block;margin-top:2px;
@@ -503,7 +510,7 @@ details.mail[open] summary::before{content:"▾ ";}
     <ol class="stops">
       <li><time>15:35</time><div><strong>小松機場</strong><em>出關後搭機場巴士，約 40 分鐘直達金澤站</em></div></li>
       <li><time>17:00</time><div><strong>Forza 金澤　入住</strong><em>安江町，從車站走過來約 15 分鐘</em></div></li>
-      <li><time>晚上</time><div><strong>めしや 魚界人 裏片町店</strong><em>創意和食吧台，週日有開・建議訂位　→ <a href="#food" style="color:var(--foil)">吃什麼</a></em></div></li>
+      <li class="dine"><time>晚上</time><div><strong>めしや 魚界人 裏片町店<i class="bk rec">建議訂</i></strong><em>片町・創意和食吧台，週日有開　→ <a href="#food">看店家</a></em></div></li>
     </ol>
   </article>
 
@@ -520,7 +527,7 @@ details.mail[open] summary::before{content:"▾ ";}
       <li><time>中午</time><div><strong>東茶屋街・主計町</strong><em>格子窗的老街，金箔與茶屋建築</em></div></li>
       <li><time>下午</time><div><strong>尾山神社・長町武家屋敷</strong><em>神門的彩繪玻璃，土牆小巷</em></div></li>
       <li><time>傍晚</time><div><strong>唱片行</strong><em>慢慢挑</em></div></li>
-      <li><time>晚上</time><div><strong>食楽 かぶ菜</strong><em>片町，小盤配酒・必訂</em></div></li>
+      <li class="dine"><time>19:00</time><div><strong>食楽 かぶ菜<i class="bk must">必訂</i></strong><em>片町・小盤配酒，已請 Forza 代訂（桌位／包廂）　→ <a href="#booking">訂位進度</a></em></div></li>
       <li><time>睡前</time><div><strong>看一下明天的天氣</strong><em>晴或雨，決定明天去海邊還是進市區</em></div></li>
     </ol>
   </article>
@@ -559,7 +566,7 @@ details.mail[open] summary::before{content:"▾ ";}
       </div>
     </div>
     <ol class="stops" style="margin-top:18px">
-      <li><time>晚上</time><div><strong>炭魚酒菜 わなか</strong><em>Forza 同一條街，吃完走兩分鐘回飯店・必訂</em></div></li>
+      <li class="dine"><time>晚上</time><div><strong>炭魚酒菜 わなか<i class="bk must">必訂</i></strong><em>Forza 同一條街，吃完走兩分鐘回飯店　→ <a href="#food">看店家</a></em></div></li>
     </ol>
   </article>
 
@@ -576,7 +583,7 @@ details.mail[open] summary::before{content:"▾ ";}
       <li><time>白天</time><div><strong>兼六園・金澤城</strong><em>十二月初剛好是雪吊完成的季節</em></div></li>
       <li><time>下午</time><div><strong>21 世紀美術館・鈴木大拙館</strong><em>泳池那件作品要現場排隊</em></div></li>
       <li><time>15:00</time><div><strong>金澤草紙　入住</strong><em>迎賓和菓子配加賀棒茶</em></div></li>
-      <li><time>17:30</time><div><strong>いたる 本店</strong><em>柿木畠，美術館後面・建議訂位</em></div></li>
+      <li class="dine"><time>17:30</time><div><strong>いたる 本店<i class="bk rec">建議訂</i></strong><em>柿木畠・美術館後面，已請 Forza 代訂　→ <a href="#booking">訂位進度</a></em></div></li>
       <li><time>20:00</time><div><strong>草紙　夜鳴烏龍麵</strong><em>免費，當收尾的一碗</em></div></li>
     </ol>
   </article>
