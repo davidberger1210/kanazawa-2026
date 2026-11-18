@@ -649,19 +649,19 @@ details.mail[open] summary::before{content:"▾ ";}
   </div>
   <div class="track rise" id="booking">
     <div class="track-top">
-      <h4>訂位進度　請 Forza 代訂</h4>
-      <span class="wait">已等待 <b id="waited">—</b>　·　11/20 前沒回就改真人代打</span>
+      <h4>訂位進度　Forza 入住前不代訂</h4>
+      <span class="wait">11/17 回覆：入住後才能請櫃檯代訂　·　<b>かぶ菜改其他管道</b></span>
     </div>
     <div class="bar"><i id="barfill"></i></div>
     <ol class="steps">
       <li class="done"><b>寄出請求</b>11/17 20:57 官網表單</li>
-      <li class="now"><b>等飯店回信</b>通常 1–2 天</li>
-      <li><b>確認訂位</b>回信寫明時間與座位</li>
-      <li><b>備案</b>11/20 未回 → 真人代打</li>
+      <li class="done"><b>飯店回信</b>11/17 23:36：入住前不代訂</li>
+      <li class="now"><b>かぶ菜 另找管道</b>AI 代打／真人代打</li>
+      <li><b>11/29 入住</b>請櫃檯訂いたる、わなか</li>
     </ol>
     <div class="track-rows">
-      <div><span>11/30 月・週一　かぶ菜　19:00・2 位・桌位或包廂</span><i class="st wait">等待回信</i></div>
-      <div><span>12/02 水・週三　いたる 本店　17:30・2 位</span><i class="st wait">等待回信</i></div>
+      <div><span>11/30 月・週一　かぶ菜　19:00・2 位・桌位或包廂</span><i class="st wait">改其他管道</i></div>
+      <div><span>12/02 水・週三　いたる 本店　17:30・2 位</span><i class="st todo">11/29 請櫃檯</i></div>
       <div><span>11/29 日・週日　めしや 魚界人　（可線上訂，ebica 表單）</span><i class="st todo">尚未訂</i></div>
       <div><span>12/01 火・週二　炭魚酒菜 わなか　（只能電話）</span><i class="st todo">尚未訂</i></div>
       <div><span>11/30 月・週一　妙立寺 忍者寺　（不預約，現場報名）</span><i class="st todo">現場報名</i></div>
@@ -904,7 +904,7 @@ SHIH YUAN HSIAO
     var w=document.getElementById('waited'); if(!w) return;
     w.textContent = ms<0 ? '—' : (h>=24 ? Math.floor(h/24)+' 天 '+(h%24)+' 小時' : h+' 小時 '+m+' 分');
     var pct=Math.max(8,Math.min(100,(ms/(due-sent))*100));
-    document.getElementById('barfill').style.width=pct+'%';
+    document.getElementById('barfill').style.width='55%';
   }
   tick(); setInterval(tick,60000);
 })();
