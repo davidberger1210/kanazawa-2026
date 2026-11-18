@@ -649,18 +649,18 @@ details.mail[open] summary::before{content:"▾ ";}
   </div>
   <div class="track rise" id="booking">
     <div class="track-top">
-      <h4>訂位進度　Forza 入住前不代訂</h4>
-      <span class="wait">11/17 回覆：入住後才能請櫃檯代訂　·　<b>かぶ菜改其他管道</b></span>
+      <h4>訂位進度　かぶ菜 已送 Klook 代訂</h4>
+      <span class="wait">11/18 已送 Klook 免費代訂，48 小時內確認　·　Forza 入住後可代訂其他家</span>
     </div>
     <div class="bar"><i id="barfill"></i></div>
     <ol class="steps">
       <li class="done"><b>寄出請求</b>11/17 20:57 官網表單</li>
       <li class="done"><b>飯店回信</b>11/17 23:36：入住前不代訂</li>
-      <li class="now"><b>かぶ菜 另找管道</b>AI 代打／真人代打</li>
+      <li class="now"><b>かぶ菜 Klook 代訂中</b>11/18 送出・等 Email 確認</li>
       <li><b>11/29 入住</b>請櫃檯訂いたる、わなか</li>
     </ol>
     <div class="track-rows">
-      <div><span>11/30 月・週一　かぶ菜　19:00・2 位・桌位或包廂</span><i class="st wait">改其他管道</i></div>
+      <div><span>11/30 月・週一　かぶ菜　19:00・2 位・盡量桌位（客滿可吧台）</span><i class="st wait">Klook 確認中</i></div>
       <div><span>12/02 水・週三　いたる 本店　17:30・2 位</span><i class="st todo">11/29 請櫃檯</i></div>
       <div><span>11/29 日・週日　めしや 魚界人　（可線上訂，ebica 表單）</span><i class="st todo">尚未訂</i></div>
       <div><span>12/01 火・週二　炭魚酒菜 わなか　（只能電話）</span><i class="st todo">尚未訂</i></div>
@@ -904,7 +904,7 @@ SHIH YUAN HSIAO
     var w=document.getElementById('waited'); if(!w) return;
     w.textContent = ms<0 ? '—' : (h>=24 ? Math.floor(h/24)+' 天 '+(h%24)+' 小時' : h+' 小時 '+m+' 分');
     var pct=Math.max(8,Math.min(100,(ms/(due-sent))*100));
-    document.getElementById('barfill').style.width='55%';
+    document.getElementById('barfill').style.width='65%';
   }
   tick(); setInterval(tick,60000);
 })();
